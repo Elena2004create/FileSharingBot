@@ -3,6 +3,7 @@ package com.example.controllers;
 
 
 
+import jakarta.annotation.PostConstruct;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -25,12 +26,19 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Value("${bot.token}")
     private String botToken;
 
+    private UpdateController updateController;
+
     //private static final Logger Log = LogManager.getLogger(TelegramBot.class);
 
-    public void init() {
-        System.out.println("Bot Name: " + botName);
-        System.out.println("Bot Token: " + botToken);
+    public TelegramBot(UpdateController updateController) {
+        this.updateController = updateController;
     }
+
+    @PostConstruct
+    public void init(){
+        updateController.registerTelegramBot(this);
+    }
+
 
     @Override
     public String getBotUsername() {
@@ -44,19 +52,15 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        var message = update.getMessage();
-        log.debug(message.getText());
+        updateController.processUpdate(update);
 
-        var response = new SendMessage();
-        response.setChatId(message.getChatId());
-        response.setText("Hello, " + message.getChat().getFirstName());
-        sendAnswerMessage(response);
     }
 
     public void sendAnswerMessage(SendMessage message) {
         if (message != null) {
             try {
                 execute(message);
+                log.debug(message.getText());
             } catch (TelegramApiException e) {
                 log.error(e);
             }
