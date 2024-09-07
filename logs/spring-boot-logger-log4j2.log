@@ -1,8 +1,37 @@
-2024-09-02 15:04:08,077 INFO TomcatWebServer [main] Tomcat initialized with port 8082 (http)
-2024-09-02 15:04:08,100 INFO DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
-2024-09-02 15:04:08,105 INFO DirectJDKLog [main] Starting service [Tomcat]
-2024-09-02 15:04:08,106 INFO DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-09-02 15:04:08,196 INFO DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2024-09-02 15:04:08,199 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1648 ms
-2024-09-02 15:04:09,999 INFO DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
-2024-09-02 15:04:10,020 INFO TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-09-04 22:06:06,382 INFO TomcatWebServer [main] Tomcat initialized with port 8082 (http)
+2024-09-04 22:06:06,405 INFO DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
+2024-09-04 22:06:06,410 INFO DirectJDKLog [main] Starting service [Tomcat]
+2024-09-04 22:06:06,411 INFO DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-04 22:06:06,503 INFO DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-09-04 22:06:06,507 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1793 ms
+2024-09-04 22:06:09,890 INFO DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
+2024-09-04 22:06:09,916 INFO TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
+2024-09-04 22:06:33,968 INFO AbstractConnectionFactory [file_beam_bot Telegram Executor] Attempting to connect to: [localhost:5672]
+2024-09-04 22:06:34,041 INFO AbstractConnectionFactory [file_beam_bot Telegram Executor] Created new connection: rabbitConnectionFactory#30bf26df:0/SimpleConnection@68d00e8c [delegate=amqp://userok@127.0.0.1:5672/, localPort=42580]
+2024-09-04 22:09:09,085 ERROR DefaultBotSession$ReaderThread [file_beam_bot Telegram Connection] Remote host terminated the handshake
+javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1715) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1515) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[?:?]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249) ~[telegrambots-6.7.0.jar:?]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188) [telegrambots-6.7.0.jar:?]
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:494) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[?:?]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[?:?]
+	... 16 more
