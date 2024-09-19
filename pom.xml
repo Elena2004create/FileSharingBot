@@ -19,6 +19,7 @@
         <module>dispatcher</module>
         <module>common-rabbit-mq</module>
         <module>node</module>
+        <module>common-jpa</module>
     </modules>
 
     <properties>

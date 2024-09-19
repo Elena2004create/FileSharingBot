@@ -31,16 +31,13 @@ public class ConsumerServiceImpl implements ConsumerService {
     @RabbitListener(queues = PHOTO_MESSAGE_UPDATE)
     public void consumePhotoMessageUpdate(Update update) {
         log.debug("Node: Photo is received");
-        var message = update.getMessage();
-        var sendMessage = new SendMessage();
-        sendMessage.setChatId(message.getChatId().toString());
-        sendMessage.setText("Photo received");
-        producerService.producerAnswer(sendMessage);
+        mainService.processPhotoMessage(update);
     }
 
     @Override
     @RabbitListener(queues = DOC_MESSAGE_UPDATE)
     public void consumeDocumentMessageUpdate(Update update) {
         log.debug("Node: Document is received");
+        mainService.processDocumentMessage(update);
     }
 }

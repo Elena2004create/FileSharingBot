@@ -1,0 +1,25 @@
+2024-09-19 11:13:29,404 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19 11:13:29,497 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2024-09-19 11:13:30,391 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19 11:13:30,505 INFO Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19 11:13:30,568 INFO RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-09-19 11:13:30,769 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2024-09-19 11:13:31,072 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a7ebe07
+2024-09-19 11:13:31,075 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2024-09-19 11:13:31,144 WARN DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19 11:13:31,789 INFO SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19 11:13:33,234 INFO JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19 11:13:33,268 INFO DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71a7cf7c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-09-19 11:13:33,345 INFO AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19 11:13:34,582 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 11:13:35,311 INFO AbstractConnectionFactory [main] Attempting to connect to: [localhost:5672]
+2024-09-19 11:13:35,386 INFO AbstractConnectionFactory [main] Created new connection: rabbitConnectionFactory#6fa2d0b2:0/SimpleConnection@6a77953c [delegate=amqp://userok@127.0.0.1:5672/, localPort=40410]
+2024-09-19 11:13:36,569 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Waiting for workers to finish.
+2024-09-19 11:13:36,571 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] Waiting for workers to finish.
+2024-09-19 11:13:36,573 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] Waiting for workers to finish.
+2024-09-19 11:13:37,454 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Successfully waited for workers to finish.
+2024-09-19 11:13:37,462 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] Successfully waited for workers to finish.
+2024-09-19 11:13:37,472 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] Successfully waited for workers to finish.
+2024-09-19 11:13:37,483 INFO AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19 11:13:37,486 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-09-19 11:13:37,493 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

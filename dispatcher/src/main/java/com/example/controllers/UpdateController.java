@@ -29,7 +29,8 @@ public class UpdateController {
         if (update == null) {
             log.error("Update is null");
         }
-        if (update.getMessage() != null) {
+        assert update != null;
+        if (update.hasMessage()) {
             destributeMessageByType(update);
         }
         else {
@@ -39,13 +40,13 @@ public class UpdateController {
 
     private void destributeMessageByType(Update update) {
         var message = update.getMessage();
-        if (message.getText() != null) {
+        if (message.hasText()) {
             processTextMessage(update);
         }
-        else if (message.getDocument() != null){
+        else if (message.hasDocument()){
             processDocumentMessage(update);
         }
-        else if (message.getPhoto() != null){
+        else if (message.hasPhoto()){
             processPhotoMessage(update);
         }
         else {
@@ -63,7 +64,7 @@ public class UpdateController {
     }
 
     private void setFileIsReceivedView(Update update) {
-        var sendMessage = messageUtils.generateSendMessage(update, "File is received");
+        var sendMessage = messageUtils.generateSendMessage(update, "File is processed");
         setView(sendMessage);
     }
 

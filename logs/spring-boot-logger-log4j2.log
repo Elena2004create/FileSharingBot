@@ -1,39 +1,33 @@
-2024-09-18 21:09:03,768 INFO TomcatWebServer [main] Tomcat initialized with port 8082 (http)
-2024-09-18 21:09:03,791 INFO DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8082"]
-2024-09-18 21:09:03,796 INFO DirectJDKLog [main] Starting service [Tomcat]
-2024-09-18 21:09:03,797 INFO DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-09-18 21:09:03,886 INFO DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2024-09-18 21:09:03,890 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1753 ms
-2024-09-18 21:09:05,814 INFO DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8082"]
-2024-09-18 21:09:05,834 INFO TomcatWebServer [main] Tomcat started on port 8082 (http) with context path '/'
-2024-09-18 21:09:05,842 INFO AbstractConnectionFactory [main] Attempting to connect to: [localhost:5672]
-2024-09-18 21:09:05,909 INFO AbstractConnectionFactory [main] Created new connection: rabbitConnectionFactory#2f20f7ad:0/SimpleConnection@e07b4db [delegate=amqp://userok@127.0.0.1:5672/, localPort=34374]
-2024-09-18 21:12:10,526 ERROR DefaultBotSession$ReaderThread [file_beam_bot Telegram Connection] Remote host terminated the handshake
-javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
-	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1715) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1515) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[?:?]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.13.jar:4.5.13]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249) ~[telegrambots-6.7.0.jar:?]
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188) [telegrambots-6.7.0.jar:?]
-Caused by: java.io.EOFException: SSL peer shut down incorrectly
-	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:494) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[?:?]
-	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507) ~[?:?]
-	... 16 more
-2024-09-18 21:28:04,919 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Waiting for workers to finish.
-2024-09-18 21:28:05,889 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Successfully waited for workers to finish.
+2024-09-19 16:01:57,985 INFO RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-19 16:01:58,096 INFO RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2024-09-19 16:01:59,058 INFO TomcatWebServer [main] Tomcat initialized with port 8083 (http)
+2024-09-19 16:01:59,079 INFO DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8083"]
+2024-09-19 16:01:59,084 INFO DirectJDKLog [main] Starting service [Tomcat]
+2024-09-19 16:01:59,085 INFO DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-09-19 16:01:59,179 INFO DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-09-19 16:01:59,183 INFO ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2278 ms
+2024-09-19 16:01:59,505 INFO LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-19 16:01:59,604 INFO Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-19 16:01:59,665 INFO RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-09-19 16:01:59,859 INFO HikariDataSource [main] HikariPool-1 - Starting...
+2024-09-19 16:02:00,157 INFO HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bfa5eb9
+2024-09-19 16:02:00,160 INFO HikariDataSource [main] HikariPool-1 - Start completed.
+2024-09-19 16:02:00,223 WARN DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-19 16:02:00,730 INFO SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-19 16:02:02,202 INFO JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-19 16:02:02,236 INFO DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@68c47cf9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2024-09-19 16:02:02,318 INFO AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19 16:02:03,436 WARN JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 16:02:04,070 INFO DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8083"]
+2024-09-19 16:02:04,105 INFO TomcatWebServer [main] Tomcat started on port 8083 (http) with context path '/'
+2024-09-19 16:02:04,112 INFO AbstractConnectionFactory [main] Attempting to connect to: [localhost:5672]
+2024-09-19 16:02:04,179 INFO AbstractConnectionFactory [main] Created new connection: rabbitConnectionFactory#2caa9666:0/SimpleConnection@490dfe25 [delegate=amqp://userok@127.0.0.1:5672/, localPort=58418]
+2024-09-19 16:04:00,980 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Waiting for workers to finish.
+2024-09-19 16:04:00,983 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] Waiting for workers to finish.
+2024-09-19 16:04:00,985 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] Waiting for workers to finish.
+2024-09-19 16:04:01,138 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] Successfully waited for workers to finish.
+2024-09-19 16:04:01,277 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] Successfully waited for workers to finish.
+2024-09-19 16:04:01,785 INFO SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] Successfully waited for workers to finish.
+2024-09-19 16:04:01,801 INFO AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-19 16:04:01,805 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-09-19 16:04:01,809 INFO HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
